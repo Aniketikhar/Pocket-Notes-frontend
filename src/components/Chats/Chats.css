@@ -1,0 +1,25 @@
+.notes::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notes::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(188, 189, 190);
+}
+
+.notes::-webkit-scrollbar-thumb {
+  background-color: rgb(243, 237, 237);
+  border-radius: 10px;
+}
+
+.notes {
+  height: 62vh;
+}
+
+
+.note{
+    background-color: white;
+    margin: 20px;
+    
+
+}

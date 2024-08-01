@@ -1,0 +1,24 @@
+.list {
+  height: 76vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.list::-webkit-scrollbar {
+  width: 8px;
+  margin: 0;
+}
+
+.list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(178, 179, 180);
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgb(238, 231, 231);
+  border-radius: 10px;
+}
+.profile {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

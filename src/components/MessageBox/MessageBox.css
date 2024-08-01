@@ -1,0 +1,27 @@
+.messagebox{
+    position: relative;
+    background-color: #001e87;
+    
+}
+
+#message {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  resize: none; /* Prevent resizing */
+  margin-right: 10px;
+  width: 100%;
+}
+
+
+.add{
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    
+    background-color: transparent;
+    border: none;
+    
+}
