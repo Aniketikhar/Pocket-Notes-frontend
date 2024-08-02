@@ -7,6 +7,7 @@ import NewGroup from "./components/NewGroup/NewGroup";
 import Navbar from "./components/Navbar/Navbar";
 import Chats from "./components/Chats/Chats";
 import MessageBox from "./components/MessageBox/MessageBox";
+import NotesBox from "./components/Notes-Box/NotesBox";
 
 function App() {
   return (
@@ -18,13 +19,7 @@ function App() {
           <NewGroup />
         </div>
         <div className="right col-12 col-md-9 p-0  d-none d-md-block">
-          <div className="d-flex flex-column h-100 ">
-            
-            <Navbar />
-            <Chats />
-            <MessageBox />
-           
-          </div>
+          <NotesBox />
         </div>
       </div>
     </>
