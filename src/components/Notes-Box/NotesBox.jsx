@@ -13,7 +13,7 @@ const NotesBox = () => {
   async function getNotes() {
     try {
       console.log(id);
-      const response = await fetch(`http://localhost:8000/single-note/${id}`);
+      const response = await fetch(`https://pocket-notes-backend-r2vl.onrender.com/single-note/${id}`);
 
       const data = await response.json();
 

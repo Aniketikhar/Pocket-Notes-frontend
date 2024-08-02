@@ -21,7 +21,7 @@ const NewGroup = () => {
       };
   
       try {
-        const response = await fetch('http://localhost:8000/create-notes', {
+        const response = await fetch('https://pocket-notes-backend-r2vl.onrender.com/create-notes', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

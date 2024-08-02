@@ -24,7 +24,7 @@ const MessageBox = (props) => {
     };
 
     try {
-      const response = await fetch(`http://localhost:8000/insert-note/${id}`, {
+      const response = await fetch(`https://pocket-notes-backend-r2vl.onrender.com/insert-note/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'

@@ -5,12 +5,11 @@ import { notesContext } from "../../Context/Context";
 const GroupList = () => {
   const [groupList, setGroupList] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const { setId , valueUpdated } = useContext(notesContext);
-
+  const { setId, valueUpdated } = useContext(notesContext);
 
   async function getGroupList() {
     try {
-      const response = await fetch("http://localhost:8000/allnotes");
+      const response = await fetch(`https://pocket-notes-backend-r2vl.onrender.com/allnotes`);
       const data = await response.json();
 
       if (data.length > 0) {
@@ -23,15 +22,13 @@ const GroupList = () => {
     }
   }
 
-  function handleClick(id){
-    
+  function handleClick(id) {
     setId(id);
-    
   }
 
   useEffect(() => {
     getGroupList();
-  },[valueUpdated]);
+  }, [valueUpdated]);
 
   return (
     <ul className="list ">
@@ -41,8 +38,16 @@ const GroupList = () => {
         <>
           {groupList?.map((group) => {
             return (
-              <li onClick={() => handleClick(group._id)} className="d-flex align-items-center my-3 " key={group._id}>
-                <div className="profile d-flex justify-content-center align-items-center " style={{background: group.color}}>
+              <li
+                onClick={() => handleClick(group._id)}
+                className="d-flex align-items-center my-3  "
+                style={{ cursor: "pointer" }}
+                key={group._id}
+              >
+                <div
+                  className="profile d-flex justify-content-center align-items-center "
+                  style={{ background: group.color }}
+                >
                   <h4 className="text-white m-0">
                     {(() => {
                       const words = group?.name.split(" ");
